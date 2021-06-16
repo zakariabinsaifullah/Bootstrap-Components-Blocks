@@ -5,10 +5,8 @@
 //  Import CSS.
 import attributes from './attributes';
 import edit from './edit';
-import './editor.scss';
 import alert from './icon';
 import save from './save';
-import './style.scss';
 
 
 const { __ } = wp.i18n;
