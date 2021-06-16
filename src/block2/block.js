@@ -1,11 +1,10 @@
 /**
- * Block Name: Test Block
+ * Block Name: Button Block
 */
 
 //  Import CSS.
 import attributes from './attributes';
 import edit from './edit';
-import alert from './icon';
 import save from './save';
 
 
@@ -14,18 +13,18 @@ const { registerBlockType } = wp.blocks;
 
 
 /**
- * Register: Test Block.
+ * Register: Button Block.
  */
-registerBlockType( 'bcb/alert', {
-	title: __( 'Alert' ),
-	description: __( 'Provide contextual feedback messages for typical user actions.' ),
+registerBlockType( 'bcb/button', {
+	title: __( 'Button' ),
+	description: __( 'button styles for actions in forms, dialogs, and more.' ),
 	icon: {
-		src: alert,
+		src: 'button',
 		foreground: '#7952B3'
 	},
 	category: 'bootstrap-components-blocks',
 	keywords: [
-		__( 'Test Block' ),
+		__( 'Button' ),
 	],
 	attributes, 
 	edit,
