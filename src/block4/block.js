@@ -1,32 +1,31 @@
 /**
- * Block Name: Button Block
+ * Block Name: Test Block
 */
 
 //  Import CSS.
 import attributes from './attributes';
 import edit from './edit';
-import './editor.scss';
-import icon from './icon';
+import progress from './icon';
 import save from './save';
-import './style.scss';
+
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 
 
 /**
- * Register: Button Block.
+ * Register: Test Block.
  */
-registerBlockType( 'bcb/container', {
-	title: __( 'Container' ),
-	description: __( 'Containers are a fundamental building block of Bootstrap.' ),
+registerBlockType( 'bcb/progress', {
+	title: __( 'Progress' ),
+	description: __( 'Progress bar can be used to show a user how far along he is in a process.' ),
 	icon: {
-		src: icon,
+		src: progress,
 		foreground: '#7952B3'
 	},
 	category: 'bootstrap-components-blocks',
 	keywords: [
-		__( 'Container' ),
+		__( 'Progress Bar' ),
 	],
 	attributes, 
 	edit,

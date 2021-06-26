@@ -17,6 +17,10 @@ const attributes= {
     newTab: {
         type: 'boolean',
         default: false
+    },
+    align: {
+        type: 'string',
+        default: 'center'
     }
 };
 

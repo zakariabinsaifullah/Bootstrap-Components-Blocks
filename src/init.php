@@ -88,8 +88,10 @@ final class Bootstrap_Components_Blocks {
 		);
 
 		// Register Single Block 
-		$this->single_block_register('test-block');
-		$this->single_block_register('button-block');
+		$this->single_block_register('container');
+		$this->single_block_register('alert');
+		$this->single_block_register('button');
+		$this->single_block_register('progress');
 	
 	}
 

@@ -1,32 +1,31 @@
 /**
- * Block Name: Button Block
+ * Block Name: Test Block
 */
 
 //  Import CSS.
 import attributes from './attributes';
 import edit from './edit';
-import './editor.scss';
-import icon from './icon';
+import alert from './icon';
 import save from './save';
-import './style.scss';
+
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 
 
 /**
- * Register: Button Block.
+ * Register: Test Block.
  */
-registerBlockType( 'bcb/container', {
-	title: __( 'Container' ),
-	description: __( 'Containers are a fundamental building block of Bootstrap.' ),
+registerBlockType( 'bcb/alert', {
+	title: __( 'Alert' ),
+	description: __( 'Provide contextual feedback messages for typical user actions.' ),
 	icon: {
-		src: icon,
+		src: alert,
 		foreground: '#7952B3'
 	},
 	category: 'bootstrap-components-blocks',
 	keywords: [
-		__( 'Container' ),
+		__( 'Test Block' ),
 	],
 	attributes, 
 	edit,

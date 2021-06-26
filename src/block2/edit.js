@@ -1,6 +1,6 @@
 
 const { Fragment } = wp.element;
-import { InspectorControls, RichText } from '@wordpress/block-editor';
+import { AlignmentToolbar, BlockControls, InspectorControls, RichText } from '@wordpress/block-editor';
 import { PanelBody, SelectControl, TextControl, ToggleControl } from '@wordpress/components';
 const { __ } = wp.i18n;
 
@@ -22,7 +22,7 @@ const types = [
 ];
 
 const Edit = ({ attributes, setAttributes }) => {
-    const { label, link, type, style, newTab } = attributes; 
+    const { label, link, type, style, newTab, align } = attributes; 
     const target = newTab ? 'blank' : 'self';
     const rel = target == 'blank' ? 'nofollow noopener' : 'noopener';
     const btnStyle = type == 'solid' ? style : `outline-${style}`;
@@ -68,20 +68,28 @@ const Edit = ({ attributes, setAttributes }) => {
                     />
                 </PanelBody>
             </InspectorControls>
-            <a 
-                className={ `btn btn-${btnStyle}` } 
-                href={ link }
-                role="button"
-                target={ `_${target}`}
-                rel= { rel }
-            >
-                <RichText
-                    tagName="span"
-                    value={ label }
-                    onChange={ ( label ) => setAttributes( { label } ) }
-                    allowedFormats={ ['core/b', 'core/italic'] }
+            <BlockControls>
+                <AlignmentToolbar
+                    value={ align }
+                    onChange={ (align) => setAttributes({ align }) }
                 />
-            </a>
+            </BlockControls>
+            <div className="btn-wrapper" style={{ textAlign: align }}>
+                <a 
+                    className={ `btn btn-${btnStyle}` } 
+                    href={ link }
+                    role="button"
+                    target={ `_${target}`}
+                    rel= { rel }
+                >
+                    <RichText
+                        tagName="span"
+                        value={ label }
+                        onChange={ ( label ) => setAttributes( { label } ) }
+                        allowedFormats={ ['core/b', 'core/italic'] }
+                    />
+                </a>
+            </div>
         </Fragment>
     );
 }

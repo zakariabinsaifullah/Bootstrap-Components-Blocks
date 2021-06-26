@@ -1,3 +1,2 @@
-const alert = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 5.177l8.631 15.823h-17.262l8.631-15.823zm0-4.177l-12 22h24l-12-22zm-1 9h2v6h-2v-6zm1 9.75c-.689 0-1.25-.56-1.25-1.25s.561-1.25 1.25-1.25 1.25.56 1.25 1.25-.561 1.25-1.25 1.25z"/></svg>; 
-
-export default alert; 
+const icon = <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 22h-24v-10.014l5.477-9.986h13.069l5.454 9.986v10.014zm-1-9h-22v8h22v-8zm-16.931-10l-4.936 9h21.735l-4.915-9h-11.884zm12.931 6v1h-14v-1h14zm-1-2v1h-12v-1h12zm-1-2v1h-10v-1h10z"/></svg>; 
+export default icon;

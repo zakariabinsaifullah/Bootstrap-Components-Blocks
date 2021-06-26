@@ -1,5 +1,1 @@
-/**
- * #.# Common SCSS
- * Can include things like variables and mixins
- * that are used across the project.
-*/
+.bcb-container-wrapper{position:relative;z-index:1}.bcb-container-wrapper .overlay{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}
