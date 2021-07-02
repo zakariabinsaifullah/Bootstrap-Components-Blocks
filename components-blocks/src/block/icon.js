@@ -1,0 +1,2 @@
+const icon = <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 22h-24v-10.014l5.477-9.986h13.069l5.454 9.986v10.014zm-1-9h-22v8h22v-8zm-16.931-10l-4.936 9h21.735l-4.915-9h-11.884zm12.931 6v1h-14v-1h14zm-1-2v1h-12v-1h12zm-1-2v1h-10v-1h10z"/></svg>; 
+export default icon;

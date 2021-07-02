@@ -27,19 +27,10 @@ require_once plugin_dir_path( __FILE__ ) . 'admin/subpage.php';
  * Admin CSS Enqueue
  */
 function bcb_admin_page_css_init($screen){
+	// print_r($screen); 
+	// wp_die();
 	if($screen === 'toplevel_page_bootstrap-blocks'){
 		wp_enqueue_style( 'admin-css', plugins_url( 'admin/css/admin.css', __FILE__ ) );
 	}
 }
  add_action( 'admin_enqueue_scripts', 'bcb_admin_page_css_init' );
-
- /*
-* Redirecting
-*/
-function bcb_users_redirecting_setting_page( $plugin ) {
-	if( plugin_basename(__FILE__) == $plugin ){
-		wp_redirect( admin_url( 'admin.php?page=bcb-setting-page' ) );
-		die();
-	}
-}
-add_action( 'activated_plugin', 'bcb_users_redirecting_setting_page' );
